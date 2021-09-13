@@ -1,13 +1,13 @@
 <?= view_cell('\App\Libraries\Tabler::iframeTabs', [
     [
-        'id' => 'tabsNews3Create',
-        'title' => 'news/create',
-        'href' => '/tutorial/news3/create',
-    ],
-    [
         'id' => 'tabsNews3CtrlSource',
         'title' => '컨트롤러',
         'href' => '/sample/home/view/Controllers/Tutorial/News3',
+    ],
+    [
+        'id' => 'tabsNews3Create',
+        'title' => 'news/create',
+        'href' => '/tutorial/news3/create',
     ],
     [
         'id' => 'tabsNews3ModelSource',

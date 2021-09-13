@@ -2,18 +2,9 @@
 
 <?= $this->section('content') ?>
 <div class="page-wrapper">
-        <div class="container-xl">
-          <!-- Page title -->
-          <div class="page-header d-print-none">
-            <div class="row align-items-center">
-              <div class="col">
-                <h2 class="page-title">
-                  Tutorial
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
+
+        <?= tabler_page_title('Tutorial') ?>
+        
         <div class="page-body">
           
           <?= view('tutorial/static_page1') ?>
@@ -27,4 +18,5 @@
           <?= view('tutorial/news3') ?>
 
         </div>
+</div>
 <?= $this->endSection() ?>

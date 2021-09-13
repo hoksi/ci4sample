@@ -1,5 +1,10 @@
 <?= view_cell('\App\Libraries\Tabler::iframeTabs', [
     [
+        'id' => 'tabsStep2Source',
+        'title' => '컨트롤러',
+        'href' => '/sample/home/view/Controllers/Tutorial/Step2',
+    ],
+    [
         'id' => 'tabsStep2',
         'title' => 'step2/view',
         'href' => '/tutorial/step2/view',
@@ -8,11 +13,6 @@
         'id' => 'tabsStep2About',
         'title' => 'step2/view/about',
         'href' => '/tutorial/step2/view/about',
-    ],
-    [
-        'id' => 'tabsStep2Source',
-        'title' => '컨트롤러',
-        'href' => '/sample/home/view/Controllers/Tutorial/Step2',
     ],
     [
         'id' => 'tabsStep2ViewHeaderSource',

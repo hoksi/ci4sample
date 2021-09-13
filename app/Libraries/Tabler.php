@@ -8,12 +8,28 @@ namespace App\Libraries;
  */
 class Tabler
 {
-    public function iframeTabs($tabData)
+    public function iframeTabs($data)
     {
-        if(is_array($tabData) && !empty($tabData)) {
-            return view('libraries/tabler/iframe-tabs', ['tabData' => $tabData]);
+        if(!empty($data)) {
+            return view('libraries/tabler/iframe-tabs', ['tabData' => $data]);
         }
 
-        return false;
+        return '';
+    }
+
+    public function card($cardData)
+    {
+        if(!empty($cardData)) {
+            return view('libraries/tabler/card', ['cardData' => $cardData]);
+        }
+
+        return '';
+    }
+
+    public function pageTitle($pageTitle)
+    {
+        if(!empty($pageTitle)) {
+            return view('libraries/tabler/page-title', ['pageTitle' => $pageTitle]);
+        }
     }
 }

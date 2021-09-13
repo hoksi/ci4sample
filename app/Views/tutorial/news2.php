@@ -1,13 +1,13 @@
 <?= view_cell('\App\Libraries\Tabler::iframeTabs', [
     [
-        'id' => 'tabsNews2',
-        'title' => '실행결과',
-        'href' => '/tutorial/news2',
-    ],
-    [
         'id' => 'tabsNews2CtrlSource',
         'title' => '컨트롤러',
         'href' => '/sample/home/view/Controllers/Tutorial/News2',
+    ],
+    [
+        'id' => 'tabsNews2',
+        'title' => '실행결과',
+        'href' => '/tutorial/news2',
     ],
     [
         'id' => 'tabsNews2ModelSource',

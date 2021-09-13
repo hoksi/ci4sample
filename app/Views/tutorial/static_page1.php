@@ -1,13 +1,13 @@
 <?= view_cell('\App\Libraries\Tabler::iframeTabs', [
     [
-        'id' => 'tabsStep1',
-        'title' => '실행결과',
-        'href' => '/tutorial/step1',
-    ],
-    [
         'id' => 'tabsStep1Source',
         'title' => '컨트롤러',
         'href' => '/sample/home/view/Controllers/Tutorial/Step1',
+    ],
+    [
+        'id' => 'tabsStep1',
+        'title' => '실행결과',
+        'href' => '/tutorial/step1',
     ],
     [
         'id' => 'tabsStep1ViewSource',

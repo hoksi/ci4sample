@@ -14,7 +14,7 @@
             <?php foreach($tabData as $idx => $item): ?>
             <div class="tab-pane <?= ($idx == 0 ? 'active' :'') ?> show" id="<?= $item['id'] ?>">
                 <div>
-                    <iframe src="<?= $item['href'] ?>" width="100%" height="800"></iframe>
+                    <iframe src="<?= $item['href'] ?>" width="100%" height="400" id="ifrm-<?= $item['id'] ?>"></iframe>
                 </div>
             </div>
             <?php endforeach; ?>

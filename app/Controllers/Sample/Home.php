@@ -2,17 +2,23 @@
 
 namespace App\Controllers\Sample;
 
+use App\Controllers\BaseController;
+
 /**
  * Description of Home
  *
  * @author hoksi
  */
-class Home extends \App\Controllers\BaseController
+class Home extends BaseController
 {
 
     public function index()
     {
-        return view('sample/sample', ['title' => 'sample']);
+        return view('sample/sample', [
+            'title' => 'ci4Sample',
+            'location' => 'home',
+            'menu' => '',
+        ]);
     }
 
     public function view(...$params)
