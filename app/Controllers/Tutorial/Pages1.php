@@ -8,7 +8,7 @@ use CodeIgniter\Controller;
  *
  * @author hoksi
  */
-class Step1 extends Controller
+class Pages1 extends Controller
 {
     public function index()
     {

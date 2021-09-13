@@ -1,4 +1,4 @@
-<?= view_cell('\App\Libraries\Tabler::iframeTabs', [
+<?= tabler_iframe_tabs([
     [
         'id' => 'tabsNews2CtrlSource',
         'title' => '컨트롤러',

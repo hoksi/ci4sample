@@ -5,11 +5,11 @@ namespace App\Controllers\Tutorial;
 use CodeIgniter\Controller;
 
 /**
- * Tutorial Step2
+ * Tutorial Pages2
  *
  * @author hoksi
  */
-class Step2 extends Controller
+class Pages2 extends Controller
 {
 
     public function index()
