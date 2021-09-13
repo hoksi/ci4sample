@@ -20,5 +20,11 @@
 
           <?= view('tutorial/static_page2') ?>
 
+          <?= view('tutorial/news1') ?>
+
+          <?= view('tutorial/news2') ?>
+
+          <?= view('tutorial/news3') ?>
+
         </div>
 <?= $this->endSection() ?>

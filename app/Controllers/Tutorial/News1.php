@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\Tutorial;
 
-use App\Models\NewsModel;
+use App\Models\Tutorial\NewsModel;
 use CodeIgniter\Controller;
 
 /**

@@ -1,15 +1,15 @@
 <?php
 
-namespace app\Models\Tutorial;
+namespace App\Models\Tutorial;
 
 use CodeIgniter\Model;
 
 /**
- * Tutorial of News Model
+ * Tutorial of NewsModel
  *
  * @author hoksi
  */
-class News extends Model
+class NewsModel extends Model
 {
     protected $table = 'news';
 
