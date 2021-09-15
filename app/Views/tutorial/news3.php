@@ -6,7 +6,7 @@
     ],
     [
         'id' => 'tabsNews3Create',
-        'title' => 'news/create',
+        'title' => '실행결과(news3/create)',
         'href' => '/tutorial/news3/create',
     ],
     [
