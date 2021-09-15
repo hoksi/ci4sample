@@ -91,6 +91,7 @@
                     <div class="dropdown-menu">
                       <div class="dropdown-menu-columns">
                         <div class="dropdown-menu-column">
+                          <!-- Tutorial -->
                           <div class="dropend">
                             <a class="dropdown-item dropdown-toggle <?= ($menu == 'tutorial' ? 'active' : '') ?>" href="#sidebar-authentication" data-bs-toggle="dropdown" role="button" aria-expanded="false" >
                               Tutorial
@@ -100,7 +101,10 @@
                                 <a class="dropdown-item <?= (isset($type) && $type == 'news' ? 'active' : '') ?>" href="/tutorial/home/news" >News</a>
                             </div>
                           </div>
+                          <!-- Controller -->
                           <a class="dropdown-item <?= ($menu == 'controller' ? 'active' : '') ?>" href="/controller" >Controller</a>
+                          <!-- Routing -->
+                          <a class="dropdown-item <?= ($menu == 'routing' ? 'active' : '') ?>" href="/routing" >Routing</a>
                         </div>
                       </div>
                     </div>
