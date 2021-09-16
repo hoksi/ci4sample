@@ -9,6 +9,7 @@
 
         <?= tabler_card_start() ?>
             <p>일반적으로 URL 문자열과 해당 컨트롤러 클래스/메소드 사이에는 일대일 관계가 있습니다. URI의 세그먼트는 일반적으로 이 패턴을 따릅니다.</p>
+            <a href="home.php"></a>
             <pre>example.com/class/method/id/</pre>
 
             <p>그러나 경우에 따라 URL에 해당하는 클래스 대신 다른 클래스/메소드를 호출할 수 있도록 이 관계를 다시 맵핑해야 할 경우가 있습니다.</p>
@@ -33,6 +34,35 @@ Users::list
 Users::list/1/23
             </pre>
 
+            <h2>Examples</h2>
+
+            <p>다음은 기본적인 몇 가지 라우팅 예입니다.</p>
+        <?= tabler_card_end() ?>
+
+        <?= tabler_iframe_tabs([
+            [
+                'id' => 'blogRoute',
+                'title' => 'Routes.php',
+                'href' => '/sample/home/view/Config/development/Blog',
+            ],
+            [
+                'id' => 'Blog',
+                'title' => 'Blogs.php',
+                'href' => '/sample/home/view/Controllers/Routing/Blogs',
+            ],
+            [
+                'id' => 'jornals',
+                'title' => '/jornals',
+                'href' => '/journals',
+            ],
+            [
+                'id' => 'blog-joe',
+                'title' => '/blog/joe',
+                'href' => '/blog/joe',
+            ],
+        ]) ?>
+
+        <?= tabler_card_start() ?>
             <h2>자리 표시자(Placeholder)</h2>
 
             <p>일반적으로 경로(route)는 다음과 같습니다</p>
@@ -73,32 +103,51 @@ Users::list/1/23
                     </tr>
                 </tbody>
             </table>
-
-            <h2>Examples</h2>
-
-            <p>다음은 기본적인 몇 가지 라우팅 예입니다.</p>
         <?= tabler_card_end() ?>
 
-        <?= view('routing/blog') ?>
+        <?= tabler_iframe_tabs([
+            [
+                'id' => 'catalogRoute',
+                'title' => 'Routes.php',
+                'href' => '/sample/home/view/Config/development/Catalog',
+            ],
+            [
+                'id' => 'Catalog',
+                'title' => 'Catalog.php',
+                'href' => '/sample/home/view/Controllers/Routing/Catalog',
+            ],
+            [
+                'id' => 'productLookup',
+                'title' => '/product/a',
+                'href' => '/product/a',
+            ],
+            [
+                'id' => 'productLookupByID',
+                'title' => '/product/123',
+                'href' => '/product/123',
+            ],
+            [
+                'id' => 'product2-1',
+                'title' => '/product2/123',
+                'href' => '/product2/123',
+            ],
+            [
+                'id' => 'product2-3',
+                'title' => '/product2/123/456/789',
+                'href' => '/product2/123/456/789',
+            ],
+            [
+                'id' => 'product3-1',
+                'title' => '/product3/123',
+                'href' => '/product3/123',
+            ],
+            [
+                'id' => 'product3-3',
+                'title' => '/product3/123/456/789',
+                'href' => '/product3/123/456/789',
+            ],
+        ]) ?>
 
-        <?= view('routing/catalog') ?>
-
-        <?= tabler_card_start() ?>
-            <h2>맞춤(custom) 자리 표시자</h2>
-
-            <p>가독성을 위해 경로(route) 파일에 사용자 정의 자리 표시자를 만들어 사용할 수 있습니다.</p>
-        <?= tabler_card_end() ?>
-
-        <?= view('routing/custom') ?>
-
-        <?= tabler_card_start() ?>
-            <h2>정규식</h2>
-
-            <p>원하는 경우 정규식을 사용하여 라우팅 규칙을 정의할 수 있습니다. 역 참조와 마찬가지로 유효한 정규식이 허용됩니다.</p>
-            <p>정규 표현식에 대해 더 배우고 싶은 사람들에게 <a href='https://www.regular-expressions.info/' target='_blank'>regular-expressions.info</a>가 좋은 출발점이 될 수 있습니다.</p>
-        <?= tabler_card_end() ?>
-
-        <?= view('routing/regex') ?>
     </div>
 </div>
 

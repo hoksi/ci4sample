@@ -10,12 +10,35 @@ use App\Controllers\BaseController;
  */
 class Home extends BaseController
 {
+    protected $menuInfo = [
+        'title' => 'Routing',
+        'location' => 'example',
+        'menu' => 'routing',
+    ];
+    
     public function index()
     {
-        return view('routing/home', [
-            'title' => 'Routing',
-            'location' => 'example',
-            'menu' => 'routing',
-        ]);
+        return $this->basic();
+    }
+    
+    public function basic()
+    {
+        $this->menuInfo['type'] = 'basic';
+        
+        return view('routing/basic', $this->menuInfo);
+    }
+    
+    public function custom()
+    {
+        $this->menuInfo['type'] = 'custom';
+        
+        return view('routing/custom', $this->menuInfo);
+    }
+    
+    public function closer()
+    {
+        $this->menuInfo['type'] = 'closer';
+        
+        return view('routing/closer', $this->menuInfo);
     }
 }
