@@ -18,7 +18,7 @@ class Home extends BaseController
     
     public function index()
     {
-        return $this->basic();
+        return view('routing/home', $this->menuInfo);
     }
     
     public function basic()

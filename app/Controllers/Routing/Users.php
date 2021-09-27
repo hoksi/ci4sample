@@ -17,4 +17,9 @@ class Users extends BaseController
         echo '경로(route)를 추가하기 전에 호출해야 합니다<br/>';
         echo 'uuid : ' . $uuid;
     }
+
+    public function profile()
+    {
+        echo "I am User::profile!";
+    }
 }

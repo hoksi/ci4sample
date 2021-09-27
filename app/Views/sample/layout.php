@@ -104,16 +104,7 @@
                           <!-- Controller -->
                           <a class="dropdown-item <?= ($menu == 'controller' ? 'active' : '') ?>" href="/controller" >Controller</a>
                           <!-- Routing -->
-                          <div class="dropend">
-                            <a class="dropdown-item dropdown-toggle <?= ($menu == 'routing' ? 'active' : '') ?>" href="#sidebar-authentication" data-bs-toggle="dropdown" role="button" aria-expanded="false" >
-                              Routing
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item <?= (isset($type) && $type == 'basic' ? 'active' : '') ?>" href="/routing/home/basic" >라우팅 기초</a>
-                                <a class="dropdown-item <?= (isset($type) && $type == 'custom' ? 'active' : '') ?>" href="/routing/home/custom" >사용자정의 자리 표시자와 정규식</a>
-                                <a class="dropdown-item <?= (isset($type) && $type == 'closer' ? 'active' : '') ?>" href="/routing/home/closer" >클로저,다중경로,리다이렉트</a>
-                            </div>
-                          </div>
+                          <a class="dropdown-item <?= ($menu == 'routing' ? 'active' : '') ?>" href="/routing" >Routing</a>
                         </div>
                       </div>
                     </div>
