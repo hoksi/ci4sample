@@ -19,6 +19,8 @@ class Filters extends BaseConfig
         'csrf'     => CSRF::class,
         'toolbar'  => DebugToolbar::class,
         'honeypot' => Honeypot::class,
+        'my-redirect' => \App\Filters\MyRedirectFilter::class,
+        'my-after' => \App\Filters\MyAfterFilter::class,
     ];
 
     /**

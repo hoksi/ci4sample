@@ -17,7 +17,7 @@ class Users extends BaseController
 
     public function list()
     {
-        print_r([
+        !d([
             'User1',
             'User2',
         ]);

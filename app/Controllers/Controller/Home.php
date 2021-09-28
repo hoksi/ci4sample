@@ -14,7 +14,7 @@ class Home extends BaseController
     {
         return view('controller/home', [
             'title' => 'Controller',
-            'location' => 'example',
+            'location' => 'controller',
             'menu' => 'controller',
         ]);
     }

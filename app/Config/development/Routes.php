@@ -31,3 +31,12 @@ require_once __DIR__ . '/GroupFilter.php';
 
 // Group 중첩 라우팅
 require_once __DIR__ . '/GroupNest.php';
+
+// Named 라우팅
+require_once __DIR__ . '/Named.php';
+
+// MyRedirectFilter 라우팅
+require_once __DIR__ . '/MyRedirectFilter.php';
+
+// MyAfterFilter 라우팅
+require_once __DIR__ . '/MyAfterFilter.php';

@@ -15,6 +15,8 @@
         <?= view('routing/closer') ?>
         <!-- Group -->
         <?= view('routing/group') ?>
+        <!-- Reverse -->
+        <?= view('routing/reverse') ?>
 
     </div>
 </div>

@@ -1,5 +1,5 @@
 <?php
-namespace App\Controllers\Routing;
+namespace App\Controllers\Filters;
 
 use App\Controllers\BaseController;
 
@@ -11,13 +11,13 @@ use App\Controllers\BaseController;
 class Home extends BaseController
 {
     protected $menuInfo = [
-        'title' => 'Routing',
+        'title' => 'Filter',
         'location' => 'controller',
-        'menu' => 'routing',
+        'menu' => 'filter',
     ];
     
     public function index()
     {
-        return view('routing/home', $this->menuInfo);
+        return view('filters/home', $this->menuInfo);
     }
 }
