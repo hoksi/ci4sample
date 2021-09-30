@@ -1,0 +1,1 @@
+<h1>Content - <?=$page_title?></h1>

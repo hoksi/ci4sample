@@ -195,6 +195,41 @@ $someClass = new SomeClass(\Config\Services::request());</pre>
 
         <p>`getHeaders()` 메소드를 사용하면 요청과 함께 전송된 모든 헤더에 액세스할 수 있습니다. 이 메소드는 키를 헤더 이름으로 사용하여 모든 헤더의 배열을 `CodeIgniter\HTTP\Header`로 반환합니다.</p>
       <?=tabler_card_end() ?>
+      <?= tabler_iframe_tabs([
+            [
+                'id' => 'Url',
+                'title' => 'Url.php',
+                'href' => '/sample/home/view/Controllers/Incomming/Url',
+            ],
+            [
+                'id' => 'Url1Show',
+                'title' => 'index',
+                'href' => '/incomming/url',
+            ],
+            [
+                'id' => 'Url2Show',
+                'title' => 'all',
+                'href' => '/incomming/url/all',
+            ],
+      ]) ?>
+
+      <?= tabler_card_start() ?>
+        <h2>업로드(Upload) 파일</h2>
+
+        <p>업로드된 모든 파일에 대한 정보는 `$request->getFiles()`를 통해 쉽고, 보안 위험을 최소화한 상태로 얻을 수 있습니다. 결과 값은 `FileCollection` 인스턴스로 반환됩니다.</p>
+      <?=tabler_card_end() ?>
+      <?= tabler_iframe_tabs([
+            [
+                'id' => 'Upload',
+                'title' => 'Upload.php',
+                'href' => '/sample/home/view/Controllers/Incomming/Upload',
+            ],
+            [
+                'id' => 'UploadShow',
+                'title' => '/incomming/upload',
+                'href' => '/incomming/upload',
+            ],
+      ]) ?>
 
     </div>
 </div>

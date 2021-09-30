@@ -79,25 +79,12 @@
                       </span>
                     </a>
                   </li>
-                  <!-- 컨트롤러와 라우팅 -->
+                  <!-- Tutorial -->
                   <?= view('sample/topmenu/tutorial') ?>
                   <!-- 컨트롤러와 라우팅 -->
                   <?= view('sample/topmenu/controller') ?>
-                  <!-- 요청처리 -->
-                  <li class="nav-item">
-                      <a class="nav-link" href="http://ci4doc.cikorea.net" target="_blank">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrows-double-sw-ne" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M14 3l-11 11"></path>
-                        <path d="M3 10v4h4"></path>
-                        <path d="M17 10h4v4"></path>
-                        <path d="M10 21l11 -11"></path>
-                      </svg>
-                      <span class="nav-link-title">
-                        요청처리
-                      </span>
-                    </a>
-                  </li>
+                  <!-- 응답(Response) 만들기 -->
+                  <?= view('sample/topmenu/response') ?>
                   <!-- 데이터베이스 -->
                   <li class="nav-item">
                       <a class="nav-link" href="http://ci4doc.cikorea.net" target="_blank">
