@@ -40,3 +40,9 @@ require_once __DIR__ . '/MyRedirectFilter.php';
 
 // MyAfterFilter 라우팅
 require_once __DIR__ . '/MyAfterFilter.php';
+
+// Locale 라우팅
+require_once __DIR__ . '/Locale.php';
+
+// Lang 라우팅
+require_once __DIR__ . '/Lang.php';

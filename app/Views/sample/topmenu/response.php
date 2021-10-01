@@ -26,6 +26,8 @@
             <a class="dropdown-item <?= ($menu == 'table' ? 'active' : '') ?>" href="/response/table" >HTML Table 클래스</a>
             <!-- HTTP 응답(Responses) -->
             <a class="dropdown-item <?= ($menu == 'http' ? 'active' : '') ?>" href="/response/http" >HTTP 응답(Responses)</a>
+            <!-- HTTP 응답(Responses) -->
+            <a class="dropdown-item <?= ($menu == 'localization' ? 'active' : '') ?>" href="/response/localization" >지역화 (Localization)</a>
           </div>
         </div>
     </div>
