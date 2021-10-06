@@ -23,6 +23,8 @@
             <a class="dropdown-item <?= ($menu == 'view' ? 'active' : '') ?>" href="/database/result" >쿼리 결과</a>
             <!-- 쿼리 헬퍼 -->
             <a class="dropdown-item <?= ($menu == 'view' ? 'active' : '') ?>" href="/database/helper" >쿼리 헬퍼</a>
+            <!-- 쿼리 빌더 -->
+            <a class="dropdown-item <?= ($menu == 'view' ? 'active' : '') ?>" href="/database/qbuilder" >쿼리 빌더</a>
           </div>
         </div>
     </div>

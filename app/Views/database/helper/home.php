@@ -23,6 +23,21 @@
             ],
         ]) ?>
 
+        <?= tabler_card_start() ?>
+            <h2>데이터베이스 정보</h2>
+        <?= tabler_card_end() ?>
+        <?= tabler_iframe_tabs([
+            [
+                'id' => 'Database',
+                'title' => 'Database.php',
+                'href' => '/sample/home/view/Controllers/Database/Helper/Database',
+            ],
+            [
+                'id' => 'DatabaseShow',
+                'title' => '/database/helper/database',
+                'href' => '/database/helper/database',
+            ],
+        ]) ?>
     </div>
 </div>
 <?= $this->endSection() ?>
