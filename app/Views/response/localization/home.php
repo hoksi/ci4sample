@@ -140,14 +140,29 @@
         <?=tabler_card_end() ?>
         <?= tabler_iframe_tabs([
             [
+                'id' => 'Lang',
+                'title' => 'Lang.php',
+                'href' => '/sample/home/view/Controllers/Response/Localization/Lang',
+            ],
+            [
                 'id' => 'LangRoute',
                 'title' => 'Route.php',
                 'href' => '/sample/home/view/Config/development/Lang',
             ],
             [
-                'id' => 'Lang',
-                'title' => 'Lang.php',
-                'href' => '/sample/home/view/Controllers/Response/Localization/Lang',
+                'id' => 'enSample',
+                'title' => 'en/Sample.php',
+                'href' => '/sample/home/view/Language/en/Sample',
+            ],
+            [
+                'id' => 'krSample',
+                'title' => 'kr/Sample.php',
+                'href' => '/sample/home/view/Language/kr/Sample',
+            ],
+            [
+                'id' => 'frSample',
+                'title' => 'fr/Sample.php',
+                'href' => '/sample/home/view/Language/fr/Sample',
             ],
             [
                 'id' => 'LangShow',
@@ -169,8 +184,74 @@
         <?= tabler_card_start() ?>
             <h2>매개 변수 교체</h2>
 
-            <p>lang() 함수의 두 번째 매개 변수로 언어 문자열의 자리 표시자를 바꾸는 값 배열을 전달할 수 있습니다. 이것은 매우 간단한 숫자 변환과 서식을 허용합니다.</p>
+            <p>lang() 함수의 두 번째 매개 변수로 언어 문자열의 자리 표시자(placeholder) 배열(간단한 숫자 변환과 서식으로 이루어짐)을 전달할 수 있습니다.</p>
         <?= tabler_card_end() ?>
+        <?= tabler_iframe_tabs([
+            [
+                'id' => 'Test',
+                'title' => 'Test.php',
+                'href' => '/sample/home/view/Controllers/Response/Localization/Test',
+            ],
+            [
+                'id' => 'enTest',
+                'title' => 'en/Test.php',
+                'href' => '/sample/home/view/Language/en/Test',
+            ],
+            [
+                'id' => 'TestShow',
+                'title' => '/response/localization/test',
+                'href' => '/response/localization/test',
+            ],
+            [
+                'id' => 'TestArrayShow',
+                'title' => '/response/localization/test/arrayIndex',
+                'href' => '/response/localization/test/arrayIndex',
+            ],
+            [
+                'id' => 'TestNamedShow',
+                'title' => '/response/localization/test/namedIndex',
+                'href' => '/response/localization/test/namedIndex',
+            ],
+        ]); ?>
+        <?= tabler_card_start() ?>
+            <p><a href="https://unicode-org.github.io/icu-docs/apidoc/released/icu4c/classMessageFormat.html#details" target="_blank">ICU 문서</a>에 명기된 유형의 데이터 변환을 지원합니다.</p>
+            <ul>
+                <li>numbers - integer, currency, percent</li>
+                <li>dates - short, medium, long, full</li>
+                <li>time - short, medium, long, full</li>
+                <li>spellout - spells out numbers (예 : 34 becomes thirty-four)</li>
+                <li>ordinal</li>
+                <li>duration</li>
+            </ul>
+            <p>다음은 몇 가지 예입니다.</p>
+        <?= tabler_card_end() ?>
+        <?= tabler_iframe_tabs([
+            [
+                'id' => 'ICUSample',
+                'title' => 'IcuSample.php',
+                'href' => '/sample/home/view/Controllers/Response/Localization/IcuSample',
+            ],
+            [
+                'id' => 'enICUSample',
+                'title' => 'en/ICUSample.php',
+                'href' => '/sample/home/view/Language/en/ICUSample',
+            ],
+            [
+                'id' => 'IcuSampleShow',
+                'title' => '/response/localization/icuSample',
+                'href' => '/response/localization/icuSample',
+            ],
+            [
+                'id' => 'IcuSampleLocaleShow',
+                'title' => '/response/localization/icuSample/locale',
+                'href' => '/response/localization/icuSample/locale',
+            ],
+            [
+                'id' => 'IcuSampleListShow',
+                'title' => '/response/localization/icuSample/list',
+                'href' => '/response/localization/icuSample/list',
+            ],
+        ]); ?>
 
     </div>
 </div>
