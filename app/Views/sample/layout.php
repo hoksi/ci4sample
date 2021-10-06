@@ -14,7 +14,7 @@
   </head>
   <body class="antialiased">
     <div class="wrapper">
-        <header class="navbar navbar-expand-md navbar-light d-print-none" style="display:none;">
+        <header class="navbar navbar-expand-md navbar-light d-print-none">
           <div class="container-xl">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
               <span class="navbar-toggler-icon"></span>
@@ -51,13 +51,10 @@
                     <div class="mt-1 small text-muted">Framework Designer</div>
                   </div>
                 </a>
-                <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow" style="display:none">
                   <a href="#" class="dropdown-item">Set status</a>
-                  <a href="#" class="dropdown-item">Profile & account</a>
-                  <a href="#" class="dropdown-item">Feedback</a>
                   <div class="dropdown-divider"></div>
                   <a href="#" class="dropdown-item">Settings</a>
-                  <a href="#" class="dropdown-item">Logout</a>
                 </div>
               </div>
             </div>
@@ -89,7 +86,7 @@
                   <?= view('sample/topmenu/database') ?>
                   <!-- 라이브러리 -->
                   <li class="nav-item">
-                      <a class="nav-link" href="http://ci4doc.cikorea.net" target="_blank">
+                      <a class="nav-link" href="javascript:alert('준비중입니다.')">
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <rect x="3" y="4" width="18" height="4" rx="2"></rect>
@@ -103,7 +100,7 @@
                   </li>
                   <!-- 헬퍼 -->
                   <li class="nav-item">
-                      <a class="nav-link" href="http://ci4doc.cikorea.net" target="_blank">
+                      <a class="nav-link" href="javascript:alert('준비중입니다.')">
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <polyline points="7 8 3 12 7 16"></polyline>

@@ -14,17 +14,17 @@
         <div class="dropdown-menu-columns">
           <div class="dropdown-menu-column">
             <!-- 데이터베이스 빠른 시작 -->
-            <a class="dropdown-item <?= ($menu == 'view' ? 'active' : '') ?>" href="/database/quick" >데이터베이스 빠른 시작</a>
+            <a class="dropdown-item <?= ($menu == 'quick' ? 'active' : '') ?>" href="/database/quick" >데이터베이스 빠른 시작</a>
             <!-- 데이터베이스 구성 -->
-            <a class="dropdown-item <?= ($menu == 'view' ? 'active' : '') ?>" href="/database/configuration" >데이터베이스 구성</a>
+            <a class="dropdown-item <?= ($menu == 'configuration' ? 'active' : '') ?>" href="/database/configuration" >데이터베이스 구성</a>
             <!-- 쿼리 -->
-            <a class="dropdown-item <?= ($menu == 'view' ? 'active' : '') ?>" href="/database/queries" >쿼리</a>
+            <a class="dropdown-item <?= ($menu == 'queries' ? 'active' : '') ?>" href="/database/queries" >쿼리</a>
             <!-- 쿼리 결과 -->
-            <a class="dropdown-item <?= ($menu == 'view' ? 'active' : '') ?>" href="/database/result" >쿼리 결과</a>
+            <a class="dropdown-item <?= ($menu == 'result' ? 'active' : '') ?>" href="/database/result" >쿼리 결과</a>
             <!-- 쿼리 헬퍼 -->
-            <a class="dropdown-item <?= ($menu == 'view' ? 'active' : '') ?>" href="/database/helper" >쿼리 헬퍼</a>
+            <a class="dropdown-item <?= ($menu == 'helper' ? 'active' : '') ?>" href="/database/helper" >쿼리 헬퍼</a>
             <!-- 쿼리 빌더 -->
-            <a class="dropdown-item <?= ($menu == 'view' ? 'active' : '') ?>" href="/database/qbuilder" >쿼리 빌더</a>
+            <a class="dropdown-item <?= ($menu == 'qbuilder' ? 'active' : '') ?>" href="/database/qbuilder" >쿼리 빌더</a>
           </div>
         </div>
     </div>

@@ -2,26 +2,32 @@
 
 <?= $this->section('content') ?>
 <div class="page-wrapper">
-    <div class="container-xl">
-    </div>
     <div class="page-body">
-      <div class="container-xl d-flex flex-column justify-content-center">
-        <div class="empty">
-          <div class="empty-img"><img src="./static/illustrations/undraw_printing_invoices_5r4r.svg" height="128"  alt="">
-          </div>
-          <p class="empty-title">No results found</p>
-          <p class="empty-subtitle text-muted">
-            Try adjusting your search or filter to find what you're looking for.
-          </p>
-          <div class="empty-action">
-            <a href="./." class="btn btn-primary">
-              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
-              Add your first client
-            </a>
-          </div>
-        </div>
-      </div>
+        <?= tabler_card_start() ?>
+        <h2>코드 이그나이터의 세계에 오신것을 환영합니다.</h2>
+
+        <p>
+            코드이그나이터(CodeIgniter)는 PHP를 사용하여 웹 사이트를 구축하는 사람들을 위한 어플리케이션 개발 프레임워크입니다.<br/>
+            풍부한 라이브러리 세트와 이러한 라이브러리에 액세스할 수 있는 간단한 인터페이스 및 논리적 구조를 제공하여 프로젝트에 창의적으로 집중할 수 있으며, 코드를 처음부터 작성하는 것보다 적은 양의 코드로 빠르게 프로젝트를 개발할 수 있습니다.
+        </p>
+        
+        <p>
+            CodeIgniter는 유연하게 유지되므로 여러분이 원하는 방식으로 작업할 수 있으며, 시스템이 원하는 방식으로 작동하도록 핵심 로직을 쉽게 확장하거나 완전히 교체할 수 있습니다.
+        </p>
+
+        <h2>코드이그나이터(CodeIgniter)가 적합한 경우</h2>
+
+        <p>코드이그나이터는 이런 프레임워크를 찾는 분들을 위한것입니다.</p>
+        
+        <ul>
+            <li>설치 공간이 작은 프레임워크</li>
+            <li>뛰어난 성능</li>
+            <li>거의 구성이 필요하지 않는 프레임워크</li>
+            <li>제한적인 코딩 규칙을 준수하지 않아도 되는 프레임워크</li>
+            <li>템플릿 언어를 배우도록 강요받고 싶지 않음 (원하는 경우 템플릿 파서를 사용할 수 있습니다.)</li>
+            <li>복잡하지 않고 간단한 솔루션</li>
+            <li>프레임워크에 대한 명확하고 철저한 문서와 샘플</li>
+        <?= tabler_card_end() ?>
     </div>
 </div>
 <?= $this->endSection() ?>
