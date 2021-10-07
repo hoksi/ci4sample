@@ -32,3 +32,10 @@ function tabler_page_title($data)
 {
     return view_cell('\App\Libraries\Tabler::pageTitle', ['pageTitle' => $data]);
 }
+
+function get_last_query($replace = true)
+{
+    $db = db_connect();
+
+    return "\n* Query : " . ($replace ? str_replace("\n", ' ', $db->getLastQuery()) : $db->getLastQuery());
+}

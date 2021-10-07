@@ -79,3 +79,10 @@
 
 <?= print_r($builder->distinct()->get()->getResult(), true) ?></pre>
 <p style='color:blue'>* Query : <?= $db->getLastQuery() ?></p>
+
+<h2>$builder->having()</h2>
+<p>쿼리의 HAVING 부분을 작성합니다.</p>
+<pre>$builder->select('name, COUNT(*) AS cnt')->groupBy('name')->having('cnt',  1)->get()->getResult();
+
+<?= print_r($builder->select('name, COUNT(*) AS cnt')->groupBy('name')->having('cnt',  1)->get()->getResult(), true) ?></pre>
+<p style='color:blue'>* Query : <?= $db->getLastQuery() ?></p>
