@@ -14,7 +14,7 @@
   </head>
   <body class="antialiased">
     <div class="wrapper">
-        <header class="navbar navbar-expand-md navbar-light d-print-none" style="display:block;">
+        <header class="navbar navbar-expand-md navbar-light d-print-none" style="display:none;">
           <div class="container-xl">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
               <span class="navbar-toggler-icon"></span>
@@ -84,6 +84,8 @@
                   <?= view('sample/topmenu/response') ?>
                   <!-- 데이터베이스 -->
                   <?= view('sample/topmenu/database') ?>
+                  <!-- 모델 -->
+                  <?= view('sample/topmenu/model') ?>
                   <!-- 라이브러리 -->
                   <li class="nav-item">
                       <a class="nav-link" href="javascript:alert('준비중입니다.')">
