@@ -25,7 +25,7 @@ class Home extends BaseController
     {
         echo '<h2>샘플 프로젝트 .env</h2>';
         echo '<pre>';
-        echo file_get_contents(APPPATH . '/../.env');
+        echo file_get_contents(APPPATH . '/../ci4sample.env');
         echo '</pre>';
     }
 }
