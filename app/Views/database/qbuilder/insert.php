@@ -52,7 +52,7 @@ $builder->ignore()->insert([
 <pre class="prettyprint">
 $builder->set('name', 'My Name')->insert();
 
-<?= print_r($builder->set('name', 'My Name')->insert(), 1) ?>
+<?= print_r($builder->set('name', 'My Name')->insert(), true) ?>
 
 <?= get_last_query() ?>
 </pre>
@@ -80,17 +80,17 @@ $builder->set('name', 'My Name')
 
 <pre class="prettyprint">
 // false로 설정한 경우
-$builder->set('name', 'RANDOM()', false)->insert();
+$builder->set('name', 'ABS(100)', false)->insert();
 
-<?= print_r($builder->set('name', 'RANDOM()', false)->insert(), 1) ?>
+<?= print_r($builder->set('name', 'ABS(100)', false)->insert(), 1) ?>
 
 <?= get_last_query() ?>
 
 
 // false로 설정하지 않은 경우
-$builder->set('name', 'RANDOM()')->insert();
+$builder->set('name', 'ABS(100)')->insert();
 
-<?= print_r($builder->set('name', 'RANDOM()')->insert(), 1) ?>
+<?= print_r($builder->set('name', 'ABS(100)')->insert(), 1) ?>
 
 <?= get_last_query() ?>
 </pre>

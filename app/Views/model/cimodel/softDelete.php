@@ -25,7 +25,7 @@ $userModel->where('idx >', 2)->delete();
 <pre class="prettyprint">
 $userModel->findAll();
 
-<?= print_r($userModel->withDeleted(false)->findAll(), true) ?>
+<?= print_r($userModel->findAll(), true) ?>
 
 <?= get_last_query() ?>
 
