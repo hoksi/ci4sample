@@ -63,7 +63,7 @@ $userModel = model('UserModel', true, $db);</pre>
         <?= tabler_card_start() ?>
             <p>
                 이렇게 작성된 모델 클래스는 데이터베이스 연결, 쿼리 빌더 등 여러 가지 편리한 추가 메소드를 제공합니다.<br/>
-                모델에 추가 설정이 필요한 경우 `initialize()` 메소드를 통해 생성자 매개 변수를 반복하지 않고 추가 단계를 수행할 수 있으며, (예: 다른 모델 확장).
+                모델에 추가 설정이 필요한 경우 `initialize()` 메소드를 통해 생성자 매개 변수를 반복하지 않고 추가 단계를 수행할 수 있습니다.
             </p>
         <?= tabler_card_end() ?>
         <?= tabler_iframe_tabs([
@@ -76,6 +76,110 @@ $userModel = model('UserModel', true, $db);</pre>
                 'id' => 'UserAuthModel',
                 'title' => 'UserAuthModel.php',
                 'href' => '/sample/home/view/Models/Authentication/Models/UserAuthModel',
+            ],
+        ]) ?>
+
+        <?= tabler_card_start() ?>
+            <h2>데이터 찾기</h2>
+        <?=tabler_card_end() ?>
+        <?= tabler_iframe_tabs([
+            [
+                'id' => 'FindShow',
+                'title' => '/model/cimodel/find',
+                'href' => '/model/cimodel/find',
+            ],
+            [
+                'id' => 'Find',
+                'title' => 'Find.php',
+                'href' => '/sample/home/view/Controllers/Model/Cimodel/Find',
+            ],
+            [
+                'id' => 'FindView',
+                'title' => 'find.php',
+                'href' => '/sample/home/view/Views/model/cimodel/find',
+            ],
+            [
+                'id' => 'FindMyTableModel',
+                'title' => 'MyTableModel.php',
+                'href' => '/sample/home/view/Models/Model/Cimodel/MyTableModel',
+            ],
+        ]) ?>
+
+        <?= tabler_card_start() ?>
+            <h2>데이터 저장</h2>
+        <?=tabler_card_end() ?>
+        <?= tabler_iframe_tabs([
+            [
+                'id' => 'SaveShow',
+                'title' => '/model/cimodel/save',
+                'href' => '/model/cimodel/save',
+            ],
+            [
+                'id' => 'Save',
+                'title' => 'Save.php',
+                'href' => '/sample/home/view/Controllers/Model/Cimodel/Save',
+            ],
+            [
+                'id' => 'SaveView',
+                'title' => 'save.php',
+                'href' => '/sample/home/view/Views/model/cimodel/save',
+            ],
+            [
+                'id' => 'SaveMyTableModel',
+                'title' => 'MyTableTmpModel.php',
+                'href' => '/sample/home/view/Models/Model/Cimodel/MyTableTmpModel',
+            ],
+        ]) ?>
+
+        <?= tabler_card_start() ?>
+            <h2>데이터 삭제</h2>
+        <?=tabler_card_end() ?>
+        <?= tabler_iframe_tabs([
+            [
+                'id' => 'DeleteShow',
+                'title' => '/model/cimodel/delete',
+                'href' => '/model/cimodel/delete',
+            ],
+            [
+                'id' => 'Delete',
+                'title' => 'Delete.php',
+                'href' => '/sample/home/view/Controllers/Model/Cimodel/Delete',
+            ],
+            [
+                'id' => 'DeleteView',
+                'title' => 'delete.php',
+                'href' => '/sample/home/view/Views/model/cimodel/delete',
+            ],
+            [
+                'id' => 'DeleteMyTableModel',
+                'title' => 'MyTableTmpModel.php',
+                'href' => '/sample/home/view/Models/Model/Cimodel/MyTableTmpModel',
+            ],
+        ]) ?>
+
+        <?= tabler_card_start() ?>
+            <h2>논리 삭제(Soft delete)</h2>
+        <?=tabler_card_end() ?>
+        <?= tabler_iframe_tabs([
+            [
+                'id' => 'SoftDeleteShow',
+                'title' => '/model/cimodel/softDelete',
+                'href' => '/model/cimodel/softDelete',
+            ],
+            [
+                'id' => 'SoftDelete',
+                'title' => 'SoftDelete.php',
+                'href' => '/sample/home/view/Controllers/Model/Cimodel/SoftDelete',
+            ],
+            [
+                'id' => 'SoftDeleteView',
+                'title' => 'softDelete.php',
+                'href' => '/sample/home/view/Views/model/cimodel/softDelete',
+            ],
+            [
+                'id' => 'SoftDeleteMyTableModel',
+                'title' => 'SoftDeleteMyTableModel.php',
+                'href' => '/sample/home/view/Models/Model/Cimodel/SoftDeleteMyTableModel',
             ],
         ]) ?>
 
@@ -204,109 +308,7 @@ $userModel = model('UserModel', true, $db);</pre>
             <p>위에서 정의한 콜백을 사용할지 여부를 결정합니다.</p>
         <?= tabler_card_end() ?>
 
-        <?= tabler_card_start() ?>
-            <h2>데이터 찾기</h2>
-        <?=tabler_card_end() ?>
-        <?= tabler_iframe_tabs([
-            [
-                'id' => 'FindShow',
-                'title' => '/model/cimodel/find',
-                'href' => '/model/cimodel/find',
-            ],
-            [
-                'id' => 'Find',
-                'title' => 'Find.php',
-                'href' => '/sample/home/view/Controllers/Model/Cimodel/Find',
-            ],
-            [
-                'id' => 'FindView',
-                'title' => 'find.php',
-                'href' => '/sample/home/view/Views/model/cimodel/find',
-            ],
-            [
-                'id' => 'FindMyTableModel',
-                'title' => 'MyTableModel.php',
-                'href' => '/sample/home/view/Models/Model/Cimodel/MyTableModel',
-            ],
-        ]) ?>
-
-        <?= tabler_card_start() ?>
-            <h2>데이터 저장</h2>
-        <?=tabler_card_end() ?>
-        <?= tabler_iframe_tabs([
-            [
-                'id' => 'SaveShow',
-                'title' => '/model/cimodel/save',
-                'href' => '/model/cimodel/save',
-            ],
-            [
-                'id' => 'Save',
-                'title' => 'Save.php',
-                'href' => '/sample/home/view/Controllers/Model/Cimodel/Save',
-            ],
-            [
-                'id' => 'SaveView',
-                'title' => 'save.php',
-                'href' => '/sample/home/view/Views/model/cimodel/save',
-            ],
-            [
-                'id' => 'SaveMyTableModel',
-                'title' => 'MyTableTmpModel.php',
-                'href' => '/sample/home/view/Models/Model/Cimodel/MyTableTmpModel',
-            ],
-        ]) ?>
-
-        <?= tabler_card_start() ?>
-            <h2>데이터 삭제</h2>
-        <?=tabler_card_end() ?>
-        <?= tabler_iframe_tabs([
-            [
-                'id' => 'DeleteShow',
-                'title' => '/model/cimodel/delete',
-                'href' => '/model/cimodel/delete',
-            ],
-            [
-                'id' => 'Delete',
-                'title' => 'Delete.php',
-                'href' => '/sample/home/view/Controllers/Model/Cimodel/Delete',
-            ],
-            [
-                'id' => 'DeleteView',
-                'title' => 'delete.php',
-                'href' => '/sample/home/view/Views/model/cimodel/delete',
-            ],
-            [
-                'id' => 'DeleteMyTableModel',
-                'title' => 'MyTableTmpModel.php',
-                'href' => '/sample/home/view/Models/Model/Cimodel/MyTableTmpModel',
-            ],
-        ]) ?>
-
-        <?= tabler_card_start() ?>
-            <h2>데이터 삭제(useSoftDelete)</h2>
-        <?=tabler_card_end() ?>
-        <?= tabler_iframe_tabs([
-            [
-                'id' => 'SoftDeleteShow',
-                'title' => '/model/cimodel/softDelete',
-                'href' => '/model/cimodel/softDelete',
-            ],
-            [
-                'id' => 'SoftDelete',
-                'title' => 'SoftDelete.php',
-                'href' => '/sample/home/view/Controllers/Model/Cimodel/SoftDelete',
-            ],
-            [
-                'id' => 'SoftDeleteView',
-                'title' => 'softDelete.php',
-                'href' => '/sample/home/view/Views/model/cimodel/softDelete',
-            ],
-            [
-                'id' => 'SoftDeleteMyTableModel',
-                'title' => 'SoftDeleteMyTableModel.php',
-                'href' => '/sample/home/view/Models/Model/Cimodel/SoftDeleteMyTableModel',
-            ],
-        ]) ?>
+        
     </div>
 </div>
 <?= $this->endSection() ?>

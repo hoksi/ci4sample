@@ -10,6 +10,8 @@ use CodeIgniter\Model;
  */
 class SoftDeleteMyTableModel extends Model
 {
+    protected $useSoftDeletes = true; // 논리 삭제(soft delete) 지정
+
     public function initialize()
     {
         /*
@@ -18,7 +20,6 @@ class SoftDeleteMyTableModel extends Model
         $this->table = 'my_table_tmp_' . rand(0, 9); // 테이블 지정
         $this->primaryKey = 'idx'; // primary key 지정
         $this->allowedFields = ['name', 'title', 'email']; // insert, update 시 사용할 컬럼 지정
-        $this->useSoftDeletes = true; // 논리 삭제(soft delete) 지정
         $this->dateFormat = 'int'; // dateFormat 지정
 
         $this->initData();

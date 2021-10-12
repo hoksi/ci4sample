@@ -11,7 +11,14 @@
 <pre class="prettyprint">
 $userModel->where('idx >', 2)->delete();
 
-<?= print_r($userModel->where('idx >', 2)->delete(), true) ?>
+<?= print_r($userModel->where('idx', 2)->delete(), true) ?>
+
+<?= get_last_query() ?>
+
+
+$userModel->findAll();
+
+<?= print_r($userModel->findAll(), true) ?>
 
 <?= get_last_query() ?>
 </pre>
@@ -23,9 +30,31 @@ $userModel->where('idx >', 2)->delete();
     이를 일시적으로 무시하려면 find* 메소드를 호출하기 전에 `withDeleted()` 메소드를 사용합니다.
 </p>
 <pre class="prettyprint">
-$userModel->findAll();
+$userModel->withDeleted()->findAll();
 
-<?= print_r($userModel->findAll(), true) ?>
+<?= print_r($userModel->withDeleted()->findAll(), true) ?>
+
+<?= get_last_query() ?>
+</pre>
+
+<h2>onlyDeleted()</h2>
+
+<p>이 메소드를 find* 메소드와 같이 사용하면 논리(soft) 삭제된 행만 리턴합니다.</p>
+<pre class="prettyprint">
+$userModel->onlyDeleted()->findAll();
+
+<?= print_r($userModel->onlyDeleted()->findAll(), true) ?>
+
+<?= get_last_query() ?>
+</pre>
+
+<h2>purgeDeleted()</h2>
+
+<p>논리(soft) 삭제된 행을 데이터베이스 테이블에서 영구적으로 제거합니다.</p>
+<pre class="prettyprint">
+$userModel->purgeDeleted();
+
+<?= print_r($userModel->purgeDeleted(), true) ?>
 
 <?= get_last_query() ?>
 
