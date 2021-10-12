@@ -6,8 +6,10 @@
    모델의 이 속성이 `true`이면 `delete*` 메소드 호출시 실제로 행을 삭제하는 대신 데이터베이스의 `deleted_at` 필드의 값을 수정합니다.<br/>
    이를 통해 데이터를 복원할 수있는 “휴지통”을 유지하거나 보안 추적의 일부로 보존할 수 있습니다.<br/>
    논리 삭제(soft delete)를 위한 `deleted_at` 필드는 데이터베이스에 타입에 따라 `DATETIME` 또는 `INTEGER`로 지정되어야 합니다.<br/>
-   필드 이름은 기본적으로 `deleted_at`로 설정되어 있지만 `$deletedField` 속성에 원하는 이름으로 지정할 수 있습니다.
+   필드 이름은 기본적으로 `deleted_at`로 설정되어 있지만 `$deletedField` 속성에 원하는 이름으로 지정할 수 있습니다.<br/>
 </p>
+<p style="color:red">`$useSoftDeletes` 속성은 initialize() 함수가 아닌 class 속성에 직접 지정하여야 정상 동작합니다.</p>
+
 <pre class="prettyprint">
 $userModel->where('idx >', 2)->delete();
 
