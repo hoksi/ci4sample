@@ -87,7 +87,7 @@
                   <!-- 모델 -->
                   <?= view('sample/topmenu/model') ?>
                   <!-- 라이브러리 -->
-                  <li class="nav-item">
+                  <li class="nav-item" style="display:none;">
                       <a class="nav-link" href="javascript:alert('준비중입니다.')">
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -101,7 +101,7 @@
                     </a>
                   </li>
                   <!-- 헬퍼 -->
-                  <li class="nav-item">
+                  <li class="nav-item" style="display:none;">
                       <a class="nav-link" href="javascript:alert('준비중입니다.')">
                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
