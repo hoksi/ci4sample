@@ -1,5 +1,5 @@
 <?php
-namespace App\Controllers\Model\Validation;
+namespace App\Controllers\Model\Event;
 
 use App\Controllers\BaseController;
 
@@ -11,13 +11,13 @@ use App\Controllers\BaseController;
 class Home extends BaseController
 {
     protected $menuInfo = [
-        'title' => '모델 데이터 검증',
+        'title' => '모델 이벤트',
         'location' => 'model',
-        'menu' => 'validation',
+        'menu' => 'event',
     ];
 
     public function index()
     {
-        return view('model/validation/home', $this->menuInfo);
+        return view('model/event/home', $this->menuInfo);
     }
 }
