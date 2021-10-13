@@ -8,8 +8,10 @@
     <div class="dropdown-menu">
         <div class="dropdown-menu-columns">
           <div class="dropdown-menu-column">
-            <!-- Codeigniter 모델 -->
-            <a class="dropdown-item <?= ($menu == 'cimodel' ? 'active' : '') ?>" href="/model/cimodel" >Codeigniter 모델</a>
+            <!-- 모델 기초 -->
+            <a class="dropdown-item <?= ($menu == 'cimodel' ? 'active' : '') ?>" href="/model/cimodel" >모델 기초</a>
+            <!-- 데이터 검증 -->
+            <a class="dropdown-item <?= ($menu == 'validation' ? 'active' : '') ?>" href="/model/validation" >데이터 검증</a>
           </div>
         </div>
     </div>
