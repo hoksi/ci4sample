@@ -55,7 +55,7 @@ class ModelEvent extends BaseController
         /* @var $callBackModel \App\Models\Model\Event\CallBackModel */
         $callBackModel = model('App\Models\Model\Event\CallBackModel');
 
-        $now = time();
+        $now = time() + 1;
         $name = 'test-' . $now;
 
         // insert
