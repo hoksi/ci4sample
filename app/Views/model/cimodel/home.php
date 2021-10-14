@@ -70,7 +70,7 @@ $userModel = model('UserModel', true, $db);</pre>
 
         <?= tabler_card_start() ?>
             <p>
-                모델에 기본 설정외에 필요한 추가 설정이 있다면 경우 `initialize()` 메소드를 통해 추가 단계를 수행할 수 있습니다.<br/>
+                모델에 기본 설정외에 필요한 추가 설정이 있다면 `initialize()` 메소드를 통해 추가할 수 있습니다.<br/>
                 아래 예는 인증 관련 모델을 확장한 후 추가 설정합니다.
             </p>
         <?= tabler_card_end() ?>

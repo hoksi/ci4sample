@@ -144,7 +144,7 @@
                 <ul class="list-inline list-inline-dots mb-0">
                   <li class="list-inline-item">
                     Copyright &copy; 2021
-                    <a href="." class="link-secondary">Tabler</a>.
+                    <a href="https://github.com/tabler/tabler" class="link-secondary" target="_blank">Tabler</a>.
                     All rights reserved.
                   </li>
                   <li class="list-inline-item">
