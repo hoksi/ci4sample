@@ -17,6 +17,8 @@
             <a class="dropdown-item <?= ($menu == 'array' ? 'active' : '') ?>" href="/helper/arr" >Array 헬퍼</a>
             <!-- Cookie 헬퍼 -->
             <a class="dropdown-item <?= ($menu == 'cookie' ? 'active' : '') ?>" href="/helper/cookie" >Cookie 헬퍼</a>
+            <!-- Date 헬퍼 -->
+            <a class="dropdown-item <?= ($menu == 'date' ? 'active' : '') ?>" href="/helper/date" >Date 헬퍼</a>
           </div>
         </div>
     </div>

@@ -18,6 +18,6 @@ class Home extends BaseController
 
     public function index()
     {
-        return view('helper/cookie/home', $this->menuInfo);
+        return view('helper/date/home', $this->menuInfo);
     }
 }
