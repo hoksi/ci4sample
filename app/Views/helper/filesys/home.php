@@ -94,7 +94,7 @@
             <h2>delete_files($path[, $delDir = false[, $htdocs = false[, $hidden = false]]]])</h2>
 
             <p>
-                지정된 경로의 파일에 데이터를 저장합니다.
+                지정된 경로의 모든 파일을 삭제합니다.
             </p>
         <?= tabler_card_end() ?>
         <?= tabler_iframe_tabs([
@@ -112,6 +112,48 @@
                 'id' => 'Exam4View',
                 'title' => 'exam4.php',
                 'href' => '/sample/home/view/Views/helper/filesys/exam4',
+            ],
+        ]) ?>
+
+        <?= tabler_card_start() ?>
+            <h2>get_filenames($source_dir[, $include_path = false])</h2>
+        <?= tabler_card_end() ?>
+        <?= tabler_iframe_tabs([
+            [
+                'id' => 'Exam5Show',
+                'title' => '/helper/filesys/exam5',
+                'href' => '/helper/filesys/exam5',
+            ],
+            [
+                'id' => 'Exam5',
+                'title' => 'Exam5.php',
+                'href' => '/sample/home/view/Controllers/Helper/Filesys/Exam5',
+            ],
+            [
+                'id' => 'Exam5View',
+                'title' => 'exam5.php',
+                'href' => '/sample/home/view/Views/helper/filesys/exam5',
+            ],
+        ]) ?>
+
+        <?= tabler_card_start() ?>
+            <h2>get_dir_file_info($source_dir, $top_level_only)</h2>
+        <?= tabler_card_end() ?>
+        <?= tabler_iframe_tabs([
+            [
+                'id' => 'Exam6Show',
+                'title' => '/helper/filesys/exam6',
+                'href' => '/helper/filesys/exam6',
+            ],
+            [
+                'id' => 'Exam6',
+                'title' => 'Exam6.php',
+                'href' => '/sample/home/view/Controllers/Helper/Filesys/Exam6',
+            ],
+            [
+                'id' => 'Exam6View',
+                'title' => 'exam6.php',
+                'href' => '/sample/home/view/Views/helper/filesys/exam6',
             ],
         ]) ?>
 
