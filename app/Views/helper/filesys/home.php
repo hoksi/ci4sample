@@ -157,6 +157,51 @@
             ],
         ]) ?>
 
+        <?= tabler_card_start() ?>
+            <h2>get_file_info($file[, $returned_values = ['name', 'server_path', 'size', 'date']])</h2>
+            <p>
+                파일의 `name`, `path`, `size`, `date modified` 정보를 반환합니다.<br/>
+                두 번째 매개 변수 `$returned_values` 반환할 정보를 선언할 수 있습니다.
+            </p>
+            
+            <h2>symbolic_permissions($perms)</h2>
+            <p>
+                숫자 사용 권한을 파일 권한 표준 기호로 변환합니다.
+            </p>
+            <pre class="prettyprint">symbolic_permissions(fileperms('./index.php'));  // -rw-r--r--</pre>
+
+            <h2>octal_permissions($perms)</h2>
+            <p>
+               숫자 사용 권한을 8진수 표기법 파일 권한으로 변환합니다.
+            </p>
+            <pre class="prettyprint">octal_permissions(fileperms('./index.php')); // 644</pre>
+
+            <h2>same_file($file1, $file2)</h2>
+            <p>
+               두 파일을 MD5 해시 기준으로 비교하여 동일한지 확인합니다.
+            </p>
+            <pre class="prettyprint">same_file($newFile, $oldFile) ? 'Same!' : 'Different!';</pre>
+
+            <h2>set_realpath($path[, $check_existence = false])</h2>
+            <p>
+               심볼릭 링크나 상대 디렉터리 구조가 없는 서버 경로를 반환합니다.<br/>
+               경로를 확인할 수 없는 경우 선택적 두 번째 인수로 인해 오류가 트리거됩니다.
+            </p>
+            <pre class="prettyprint">$file = '/etc/php5/apache2/php.ini';
+echo set_realpath($file); // Prints '/etc/php5/apache2/php.ini'
+
+$non_existent_file = '/path/to/non-exist-file.txt';
+echo set_realpath($non_existent_file, true);    // Shows an error, as the path cannot be resolved
+echo set_realpath($non_existent_file, false);   // Prints '/path/to/non-exist-file.txt'
+
+$directory = '/etc/php5';
+echo set_realpath($directory);  // Prints '/etc/php5/'
+
+$non_existent_directory = '/path/to/nowhere';
+echo set_realpath($non_existent_directory, true);       // Shows an error, as the path cannot be resolved
+echo set_realpath($non_existent_directory, false);      // Prints '/path/to/nowhere'</pre>
+        <?= tabler_card_end() ?>
+
     </div>
 </div>
 <?= $this->endSection() ?>
