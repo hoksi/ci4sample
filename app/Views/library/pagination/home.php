@@ -170,8 +170,8 @@ $pager = service('pager'); // service() 헬퍼를 통해 로드</pre>
             ],
             [
                 'id' => 'Exam6View',
-                'title' => 'exam4.php',
-                'href' => '/sample/home/view/Views/library/pagination/exam4',
+                'title' => 'exam6.php',
+                'href' => '/sample/home/view/Views/library/pagination/exam6',
             ],
         ]) ?>
 </div>
