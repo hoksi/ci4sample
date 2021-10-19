@@ -16,7 +16,7 @@
             </ul>
 
             <p>- 페이지 링크</p>
-            <?= $usersPager->simpleLinks('group1') ?>
+            <?= $usersPager->links('group1') ?>
         </td>
         <td>
             <p>- 페이지 리스트</p>
@@ -31,7 +31,7 @@
             </ul>
 
             <p>- 페이지 링크</p>
-            <?= $pagesPager->simpleLinks('group2') ?>
+            <?= $pagesPager->links('group2') ?>
         </td>
     </tr>
 </table>

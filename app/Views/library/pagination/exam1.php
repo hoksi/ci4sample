@@ -6,7 +6,7 @@
 <?= $pager1->makeLinks($page, 10, 100) ?>
 
 <p>- $pager2 페이지 심플 링크</p>
-<?= $pager2->makeLinks($page, 10, 100) ?>
+<?= $pager2->makeLinks($page, 10, 100, 'default_simple') ?>
 
 <?= $this->endSection() ?>
 

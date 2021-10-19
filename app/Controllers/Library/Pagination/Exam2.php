@@ -29,18 +29,4 @@ class Exam2 extends BaseController
 
         echo view('library/pagination/exam2', $data);
     }
-
-    public function group()
-    {
-        $group1 = service('pager');
-        $group1->setPath('path/for/my-group', 'group1');
-
-        $g1Page = $this->request->getGet('group1_page');
-
-        $data = [
-            'group1' => $group1->makeLinks(),
-        ];
-
-        echo view('library/pagination/exam2_group', $data);
-    }
 }
