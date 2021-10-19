@@ -13,7 +13,7 @@
     <link href="/assets/tabler/css/demo.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </head>
-  <body style="background-color: white;">
+  <body style="background-color: white; overflow-y: auto;">
         <?= $this->renderSection('content') ?>
   </body>
 </html>

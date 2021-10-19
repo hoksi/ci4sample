@@ -10,6 +10,8 @@
           <div class="dropdown-menu-column">
             <!-- 모델 기초 -->
             <a class="dropdown-item <?= ($menu == 'cimodel' ? 'active' : '') ?>" href="/model/cimodel" >모델 기초</a>
+            <!-- 모델 페이지네이션 -->
+            <a class="dropdown-item <?= ($menu == 'validation' ? 'active' : '') ?>" href="/model/pagination" >모델 페이지네이션</a>
             <!-- 데이터 검증 -->
             <a class="dropdown-item <?= ($menu == 'validation' ? 'active' : '') ?>" href="/model/validation" >모델 데이터 검증</a>
             <!-- 모델 이벤트 -->

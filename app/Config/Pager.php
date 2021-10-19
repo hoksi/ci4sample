@@ -24,6 +24,8 @@ class Pager extends BaseConfig
         'default_full'   => 'CodeIgniter\Pager\Views\default_full',
         'default_simple' => 'CodeIgniter\Pager\Views\default_simple',
         'default_head'   => 'CodeIgniter\Pager\Views\default_head',
+        // 새로 추가한 뷰
+        'tabler_full'   => 'App\Views\Pager\Sample\tabler_full',
     ];
 
     /**

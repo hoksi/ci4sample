@@ -11,6 +11,14 @@
     <link href="/assets/tabler/css/tabler-payments.min.css" rel="stylesheet"/>
     <link href="/assets/tabler/css/tabler-vendors.min.css" rel="stylesheet"/>
     <link href="/assets/tabler/css/demo.min.css" rel="stylesheet"/>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RSRH300EL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2RSRH300EL');
+    </script>
   </head>
   <body class="antialiased">
     <div class="wrapper">
@@ -87,19 +95,7 @@
                   <!-- 모델 -->
                   <?= view('sample/topmenu/model') ?>
                   <!-- 라이브러리 -->
-                  <li class="nav-item" style="display:none;">
-                      <a class="nav-link" href="javascript:alert('준비중입니다.')">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <rect x="3" y="4" width="18" height="4" rx="2"></rect>
-                        <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10"></path>
-                        <line x1="10" y1="12" x2="14" y2="12"></line>
-                      </svg>
-                      <span class="nav-link-title">
-                        라이브러리
-                      </span>
-                    </a>
-                  </li>
+                  <?= view('sample/topmenu/library') ?>
                   <!-- 헬퍼 -->
                   <?= view('sample/topmenu/helper') ?>
                   <!-- 메뉴얼 -->
