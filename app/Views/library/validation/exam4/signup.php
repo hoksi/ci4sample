@@ -6,7 +6,7 @@
 
     <?= (isset($validation) ? $validation->listErrors() : '') ?>
 
-    <?= form_open('/library/validation/exam1/signup') ?>
+    <?= form_open('/library/validation/exam4/signup') ?>
 
     <h5>Username</h5>
     <input type="text" name="username" value="<?= set_value('username') ?>" size="50" />
