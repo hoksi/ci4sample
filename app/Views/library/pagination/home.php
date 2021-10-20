@@ -174,5 +174,61 @@ $pager = service('pager'); // service() 헬퍼를 통해 로드</pre>
                 'href' => '/sample/home/view/Views/library/pagination/exam6',
             ],
         ]) ?>
+
+        <?= tabler_card_start() ?>
+            <h2>페이져 템플릿 만들기</h2>
+
+            <p>
+                새로운 템플릿 작성시 여러 곳에서 사용의 유용성을 제한할 수 있는 불필요한 코드는 최대한 배제하고 페이지네이션 링크에 필요한 코드만 작성합니다.<br/>
+                코드이그나이터가 제공하는 `default_full` 템플릿를 복사하여 새로운 뷰를 작성하는 것이 가장 쉽습니다.<br/>
+                `default_full` 템플릿은 `vendor/codeigniter4/framework/system/Pager/Views` 폴더에 있습니다.
+            </p>
+        <?= tabler_card_end() ?>
+        <?= tabler_iframe_tabs([
+            [
+                'id' => 'default_full',
+                'title' => 'vendor/.../default_full.php',
+                'href' => '/sample/home/view/Views/Pager/Sample/default_full',
+            ],
+        ]) ?>
+
+        <?= tabler_card_start() ?>
+            <h2>setSurroundCount()</h2>
+            <p>
+                현재 페이지 링크의 양쪽에 표시할 링크 수를 지정합니다.
+            </p>
+
+            <h2>hasPrevious() & hasNext()</h2>
+            <p>
+                `setSurroundCount()`에 전달된 값을 기준으로 현재 페이지의 양쪽에 표시할 링크가 있으면 `true`를 반환합니다.
+            </p>
+
+            <h2>getPrevious() & getNext()</h2>
+            <p>
+                현재 페이지를 기준으로 이전 또는 다음 페이지 링크 URL을 반환합니다.
+            </p>
+
+            <h2>getFirst() & getLast()</h2>
+            <p>
+                첫 페이지 또는 마지막 페이지의 링크 URL를 반환합니다.
+            </p>
+
+            <h2>links()</h2>
+
+            <p>
+                페이지가 매겨진 모든 링크에 대한 정보를 배열로 반환합니다.<br/>
+                각 링크 항목은 URI, 페이지, 페이지 활성 여부를 포함합니다.
+                <pre class="prettyprint">
+$link = [
+    'active' => false,
+    'uri'    => 'http://example.com/foo?page=2',
+    'title'  => 1,
+];</pre>
+                
+            <h2>getPageCount()</h2>
+            <p>
+                총 페이지 수를 반환합니다.
+            </p>
+        <?=tabler_card_end() ?>
 </div>
 <?= $this->endSection() ?>
