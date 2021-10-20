@@ -15,6 +15,8 @@
             <div class="dropdown-menu-column">
                 <!-- 페이지네이션 -->
                 <a class="dropdown-item <?= ($menu == 'pagination' ? 'active' : '') ?>" href="/library/pagination" >페이지네이션</a>
+                <!-- 폼 검증 -->
+                <a class="dropdown-item <?= ($menu == 'pagination' ? 'active' : '') ?>" href="/library/validation" >폼 검증</a>
             </div>
         </div>
     </div>

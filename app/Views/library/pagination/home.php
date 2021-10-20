@@ -218,17 +218,20 @@ $pager = service('pager'); // service() 헬퍼를 통해 로드</pre>
             <p>
                 페이지가 매겨진 모든 링크에 대한 정보를 배열로 반환합니다.<br/>
                 각 링크 항목은 URI, 페이지, 페이지 활성 여부를 포함합니다.
-                <pre class="prettyprint">
+            </p>
+            <pre class="prettyprint">
 $link = [
     'active' => false,
     'uri'    => 'http://example.com/foo?page=2',
     'title'  => 1,
 ];</pre>
+
                 
             <h2>getPageCount()</h2>
             <p>
                 총 페이지 수를 반환합니다.
             </p>
         <?=tabler_card_end() ?>
+    </div>
 </div>
 <?= $this->endSection() ?>
