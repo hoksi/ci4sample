@@ -73,10 +73,7 @@ $client->post('http://example.com');</pre>
             </p>
 
             <?= view('library/curl/curl_option') ?>
-
-
         <?=tabler_card_end() ?>
-
 
     </div>
 </div>

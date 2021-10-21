@@ -18,7 +18,7 @@ class Home extends BaseController
 
     public function index()
     {
-        //
+        // CURLRequest 로드
         $this->menuInfo['client'] = \Config\Services::curlrequest();
 
         return view('library/curl/home', $this->menuInfo);
