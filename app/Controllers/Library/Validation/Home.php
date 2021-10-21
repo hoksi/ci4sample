@@ -12,8 +12,8 @@ class Home extends BaseController
 {
     protected $menuInfo = [
         'title' => '폼 검증',
-        'location' => 'validation',
-        'menu' => 'library',
+        'location' => 'library',
+        'menu' => 'validation',
     ];
 
     public function index()
