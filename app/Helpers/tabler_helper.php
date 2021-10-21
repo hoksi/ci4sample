@@ -29,6 +29,23 @@ function tabler_card_end()
     ]);
 }
 
+function tabler_card_row_start()
+{
+    return implode('', [
+        '<div class="row row-cards">',
+        '<div class="col-12">',
+        '<div class="card">',
+        '<div class="card-body">',
+    ]);
+}
+
+function tabler_card_row_end()
+{
+    return implode('', [
+        '</div>', '</div>', '</div>', '</div>',
+    ]);
+}
+
 function tabler_page_title($data)
 {
     return view_cell('\App\Libraries\Tabler::pageTitle', ['pageTitle' => $data]);

@@ -12,8 +12,8 @@ class Home extends BaseController
 {
     protected $menuInfo = [
         'title' => '모델 페이지네이션',
-        'location' => 'pagination',
-        'menu' => 'model',
+        'location' => 'model',
+        'menu' => 'pagination',
     ];
 
     public function index()
