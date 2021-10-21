@@ -59,6 +59,7 @@
                       <ol>
                           <li><a href="/library/pagination">페이지네이션</a></li>
                           <li><a href="/library/validation">폼검증</a></li>
+                          <li><a href="/library/curl">CURLRequest</a></li>
                       </ol>
                 <?= tabler_card_row_end() ?>
               </div>

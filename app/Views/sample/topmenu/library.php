@@ -16,7 +16,9 @@
                 <!-- 페이지네이션 -->
                 <a class="dropdown-item <?= ($menu == 'pagination' ? 'active' : '') ?>" href="/library/pagination" >페이지네이션</a>
                 <!-- 폼 검증 -->
-                <a class="dropdown-item <?= ($menu == 'pagination' ? 'active' : '') ?>" href="/library/validation" >폼 검증</a>
+                <a class="dropdown-item <?= ($menu == 'validation' ? 'active' : '') ?>" href="/library/validation" >폼 검증</a>
+                <!-- CURLRequest -->
+                <a class="dropdown-item <?= ($menu == 'curl' ? 'active' : '') ?>" href="/library/curl" >CURLRequest</a>
             </div>
         </div>
     </div>

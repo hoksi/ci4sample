@@ -11,6 +11,7 @@
     <link href="/assets/tabler/css/tabler-payments.min.css" rel="stylesheet"/>
     <link href="/assets/tabler/css/tabler-vendors.min.css" rel="stylesheet"/>
     <link href="/assets/tabler/css/demo.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RSRH300EL"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
