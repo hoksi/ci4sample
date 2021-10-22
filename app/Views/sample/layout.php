@@ -11,6 +11,15 @@
     <link href="/assets/tabler/css/tabler-payments.min.css" rel="stylesheet"/>
     <link href="/assets/tabler/css/tabler-vendors.min.css" rel="stylesheet"/>
     <link href="/assets/tabler/css/demo.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RSRH300EL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2RSRH300EL');
+    </script>
   </head>
   <body class="antialiased">
     <div class="wrapper">
@@ -28,19 +37,16 @@
             <div class="navbar-nav flex-row order-md-last">
               <div class="nav-item d-none d-md-flex me-3">
                 <div class="btn-list">
+                  <script async src="https://cse.google.com/cse.js?cx=bc31bcc32f9b16530"></script>
+                  <div class="gcse-search"></div>
+                </div>
+              </div>
+              <div class="nav-item d-none d-md-flex me-3">
+                <div class="btn-list">
                   <a href="https://github.com/hoksi/ci4sample" class="btn btn-outline-white" target="_blank" rel="noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon text-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
                     Source code
                   </a>
-                </div>
-              </div>
-              <div class="nav-item dropdown d-none d-md-flex me-3">
-                <div class="dropdown-menu dropdown-menu-end dropdown-menu-card">
-                  <div class="card">
-                    <div class="card-body">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad amet consectetur exercitationem fugiat in ipsa ipsum, natus odio quidem quod repudiandae sapiente. Amet debitis et magni maxime necessitatibus ullam.
-                    </div>
-                  </div>
                 </div>
               </div>
               <div class="nav-item dropdown">
@@ -87,33 +93,9 @@
                   <!-- 모델 -->
                   <?= view('sample/topmenu/model') ?>
                   <!-- 라이브러리 -->
-                  <li class="nav-item" style="display:none;">
-                      <a class="nav-link" href="javascript:alert('준비중입니다.')">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <rect x="3" y="4" width="18" height="4" rx="2"></rect>
-                        <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10"></path>
-                        <line x1="10" y1="12" x2="14" y2="12"></line>
-                      </svg>
-                      <span class="nav-link-title">
-                        라이브러리
-                      </span>
-                    </a>
-                  </li>
+                  <?= view('sample/topmenu/library') ?>
                   <!-- 헬퍼 -->
-                  <li class="nav-item" style="display:none;">
-                      <a class="nav-link" href="javascript:alert('준비중입니다.')">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <polyline points="7 8 3 12 7 16"></polyline>
-                        <polyline points="17 8 21 12 17 16"></polyline>
-                        <line x1="14" y1="4" x2="10" y2="20"></line>
-                      </svg>
-                      <span class="nav-link-title">
-                        헬퍼
-                      </span>
-                    </a>
-                  </li>
+                  <?= view('sample/topmenu/helper') ?>
                   <!-- 메뉴얼 -->
                   <li class="nav-item">
                       <a class="nav-link" href="http://ci4doc.cikorea.net" target="_blank">
@@ -144,11 +126,11 @@
                 <ul class="list-inline list-inline-dots mb-0">
                   <li class="list-inline-item">
                     Copyright &copy; 2021
-                    <a href="." class="link-secondary">Tabler</a>.
+                    <a href="https://github.com/tabler/tabler" class="link-secondary" target="_blank">Tabler</a>.
                     All rights reserved.
                   </li>
                   <li class="list-inline-item">
-                    <a href="./changelog.html" class="link-secondary" rel="noopener">v1.0.0-beta3</a>
+                    v1.0.0-beta3
                   </li>
                 </ul>
               </div>

@@ -8,8 +8,16 @@
     <div class="dropdown-menu">
         <div class="dropdown-menu-columns">
           <div class="dropdown-menu-column">
-            <!-- Codeigniter 모델 -->
-            <a class="dropdown-item <?= ($menu == 'cimodel' ? 'active' : '') ?>" href="/model/cimodel" >Codeigniter 모델</a>
+            <!-- 모델 기초 -->
+            <a class="dropdown-item <?= ($menu == 'cimodel' ? 'active' : '') ?>" href="/model/cimodel" >모델 기초</a>
+            <!-- 모델 페이지네이션 -->
+            <a class="dropdown-item <?= ($menu == 'pagination' ? 'active' : '') ?>" href="/model/pagination" >모델 페이지네이션</a>
+            <!-- 데이터 검증 -->
+            <a class="dropdown-item <?= ($menu == 'validation' ? 'active' : '') ?>" href="/model/validation" >모델 데이터 검증</a>
+            <!-- 모델 이벤트 -->
+            <a class="dropdown-item <?= ($menu == 'event' ? 'active' : '') ?>" href="/model/event" >모델 이벤트</a>
+            <!-- Entity -->
+            <a class="dropdown-item <?= ($menu == 'entity' ? 'active' : '') ?>" href="/model/entity" >Entity</a>
           </div>
         </div>
     </div>

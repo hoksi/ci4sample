@@ -70,7 +70,7 @@ $userModel = model('UserModel', true, $db);</pre>
 
         <?= tabler_card_start() ?>
             <p>
-                모델에 기본 설정외에 필요한 추가 설정이 있다면 경우 `initialize()` 메소드를 통해 추가 단계를 수행할 수 있습니다.<br/>
+                모델에 기본 설정외에 필요한 추가 설정이 있다면 `initialize()` 메소드를 통해 추가할 수 있습니다.<br/>
                 아래 예는 인증 관련 모델을 확장한 후 추가 설정합니다.
             </p>
         <?= tabler_card_end() ?>
@@ -190,6 +190,66 @@ $userModel = model('UserModel', true, $db);</pre>
                 'href' => '/sample/home/view/Models/Model/Cimodel/SoftDeleteMyTableModel',
             ],
         ]) ?>
+
+        <?= tabler_card_start() ?>
+            <h2>쿼리 빌더 사용</h2>
+
+            <p>
+                모델은 쿼리 빌더 공유 인스턴스에 액세스할 수 있으며, 동일한 체인 호출을 통하여 쿼리 빌더 메소드와 CRUD 메소드를 함께 사용할 수 있습니다.
+            </p>
+            <pre class="prettyprint">
+$users = $userModel->where('status', 'active')
+    ->orderBy('last_login', 'asc')
+    ->findAll();</pre>
+        <?= tabler_card_end() ?>
+
+        <?= tabler_card_start() ?>
+            <h2>런타임 리턴 유형 변경</h2>
+
+            <p>
+                클래스 `$returnType` 속성을 사용하여 `find*()` 메소드가 리턴하는 데이터 형식을 지정할 수 있습니다.<br/>
+                하지만 기본적으로 지정한 형식과 다른 데이터 형식이 필요한 경우도 있습니다.<br/>
+                이를 수행하기 위해 다음 메소드를 제공합니다.
+            </p>
+
+            <h2>asArray()</h2>
+
+            <p>
+                `find*()` 메소드의 데이터를 연관 배열로 리턴합니다.
+            </p>
+            <pre class="prettyprint">$users = $userModel->asArray()->where('status', 'active')->findAll();</pre>
+
+            <h2>asObject()</h2>
+
+            <p>
+                `find*()` 메소드의 데이터를 표준 객체 또는 사용자 정의 클래스 인스턴스로 반환합니다.
+            </p>
+            <pre class="prettyprint">
+// Return as standard objects
+$users = $userModel->asObject()->where('status', 'active')->findAll();
+
+// Return as custom class instances
+$users = $userModel->asObject('User')->where('status', 'active')->findAll();</pre>
+            
+        <?= tabler_card_end() ?>
+
+        <?= tabler_card_start() ?>
+            <h2>많은 양의 데이터 처리</h2>
+
+            <p>
+                많은 양의 데이터를 처리해야 할 때 메모리가 부족해질 위험이 있습니다.<br/>
+                이를 방지하기 위해 chunk() 메소드를 사용하여 작업을 수행하면 작은 크기의 데이터 청크를 얻을 수 있습니다.<br/>
+                첫 번째 매개 변수는 단일 청크의 크기이고, 두 번째 매개 변수는 각 청크 데이터 행에 대해 호출될 클로저(Closure)입니다.
+            </p>
+            <p>
+                이 방법은 크론 작업, 데이터 내보내기(export) 또는 기타 대규모 작업에 적합합니다.
+            </p>
+            <pre class="prettyprint">
+$userModel->chunk(100, function ($data) {
+    // do something.
+    // $data is a single row of data.
+});</pre>
+        <?= tabler_card_end() ?>
 
         <?= tabler_card_start() ?>
             <h2>데이터베이스 연결</h2>

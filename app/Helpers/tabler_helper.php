@@ -12,12 +12,13 @@ function tabler_card($data)
 
 function tabler_card_start()
 {
-    return implode('', [
-        '<div class="container-xl">',
-        '<div class="row row-cards">',
-        '<div class="col-md-12">',
-        '<div class="card">',
-        '<div class="card-body">',
+    return implode('',
+        [
+            '<div class="container-xl">',
+            '<div class="row row-cards">',
+            '<div class="col-md-12">',
+            '<div class="card">',
+            '<div class="card-body">',
     ]);
 }
 
@@ -25,6 +26,23 @@ function tabler_card_end()
 {
     return implode('', [
         '</div>', '</div>', '</div>', '</div>', '</div>'
+    ]);
+}
+
+function tabler_card_row_start()
+{
+    return implode('', [
+        '<div class="row row-cards">',
+        '<div class="col-12">',
+        '<div class="card">',
+        '<div class="card-body">',
+    ]);
+}
+
+function tabler_card_row_end()
+{
+    return implode('', [
+        '</div>', '</div>', '</div>', '</div>',
     ]);
 }
 
@@ -37,5 +55,20 @@ function get_last_query($replace = true)
 {
     $db = db_connect();
 
-    return "\n* Query : " . ($replace ? str_replace("\n", ' ', $db->getLastQuery()) : $db->getLastQuery());
+    return "\n* Query : ".($replace ? str_replace("\n", ' ', $db->getLastQuery()) : $db->getLastQuery());
+}
+
+function get_vfs($copyPath = false)
+{
+    // 복사할 디렉토리 지정
+    $copyPath = ($copyPath === false ? (realpath(APPPATH.'/Controllers')) : realpath($copyPath));
+
+    // 테스트용 가상 파일 시스템 생성
+    \org\bovigo\vfs\vfsStreamWrapper::register();
+    \org\bovigo\vfs\vfsStreamWrapper::setRoot(new \org\bovigo\vfs\vfsStreamDirectory('root', 0000));
+    if ($copyPath !== false) {
+        \org\bovigo\vfs\vfsStream::copyFromFileSystem($copyPath, \org\bovigo\vfs\vfsStream::setup(), 1024);
+    }
+
+    return \org\bovigo\vfs\vfsStream::url('root');
 }
