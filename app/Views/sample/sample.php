@@ -101,6 +101,7 @@
                           <li><a href="/response/parser">View Parser</a></li>
                           <li><a href="/response/table">HTML Table</a></li>
                           <li><a href="/response/http">HTTP Response</a></li>
+                          <li><a href="/response/api">API Response Trait</a></li>
                           <li><a href="/response/localization">Localization</a></li>
                       </ol>
                 <?= tabler_card_row_end() ?>

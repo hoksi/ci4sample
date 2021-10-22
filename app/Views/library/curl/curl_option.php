@@ -202,5 +202,5 @@ $client->request('GET', 'http://example.com', ['verify' => '/path/to/cert.pem'])
 </p>
 <pre class="prettyprint">
 // HTTP/1.0으로 설정
-$client->request('GET', '/', ['version' => 1.0]);
+$client->request('GET', 'http://example.com', ['version' => 1.0]);
 </pre>
