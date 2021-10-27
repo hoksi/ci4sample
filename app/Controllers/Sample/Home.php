@@ -14,11 +14,7 @@ class Home extends BaseController
 
     public function index()
     {
-        return view('sample/sample', [
-            'title' => 'ci4Sample',
-            'location' => 'home',
-            'menu' => '',
-        ]);
+        return $this->response->redirect('/');
     }
 
     public function view(...$params)
