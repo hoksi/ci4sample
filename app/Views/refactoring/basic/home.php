@@ -164,7 +164,7 @@ function moreThan100($anOrder)
         <?= tabler_card_end() ?>
 
         <?= tabler_card_start() ?>
-            <h2>함수 이름 바꾸기</h2>
+            <h2>함수 선언 바꾸기</h2>
 
             <p>
                 함수 이름이 좋으면 함수 호출문만 보고도 무슨 일을 하는지 파악할 수 있습니다.<br/>
@@ -243,6 +243,171 @@ function circumference($radius)
                 <li>이름을 바꿀 변수를 참조하는 곳을 모두 찾아서, 하나씩 변경한다.</li>
                 <li>테스트한다.</li>
             </ol>
+        <?= tabler_card_end() ?>
+
+        <?= tabler_card_start() ?>
+            <h2>매개변수 객체 만들기</h2>
+
+            <p>
+                함수의 데이터 항목이 여러개인 경우 데이터 구조 하나로 모아줍니다.<br/>
+                데이터 구조로 묶으면 데이터 사이의 관계가 명확해지고 매개변수 수가 줄어듭니다.
+            </p>
+
+            <ol>
+                <li>적당한 데이터 구조가 아직 마련되어 있지 않다면 새로 만든다.</li>
+                <li>테스트한다.</li>
+                <li>함수 선언 바꾸기로 새 데이터 구조를 매개변수로 추가한다.</li>
+                <li>테스트한다.</li>
+                <li>함수 호출 시 새로운 데이터 구조 인스턴스를 넘기도록 수정한다. 하나씩 수정할 때 마다 테스트한다.</li>
+                <li>기존 매개변수를 사용하던 코드를 새 데이터 구조의 원소를 사용하도록 바군다.</li>
+                <li>다 바꿨다면 기존 매개변수를 제거하고 테스트한다.</li>
+            </ol>
+
+            <?= tabler_iframe_tabs([
+                [
+                    'id' => 'Exam5Show',
+                    'title' => '/refactoring/basic/exam5',
+                    'href' => '/refactoring/basic/exam5',
+                ],
+                [
+                    'id' => 'Exam5',
+                    'title' => 'Exam5.php',
+                    'href' => '/sample/home/view/Controllers/Refactoring/Basic/Exam5',
+                ],
+                [
+                    'id' => 'ReftExam5Show',
+                    'title' => '/refactoring/basic/refactoring/exam5',
+                    'href' => '/refactoring/basic/refactoring/exam5',
+                ],
+                [
+                    'id' => 'ReftExam5',
+                    'title' => 'Exam5.php(Refactoring)',
+                    'href' => '/sample/home/view/Controllers/Refactoring/Basic/Refactoring/Exam5',
+                ],
+            ]) ?>
+        <?= tabler_card_end() ?>
+
+        <?= tabler_card_start() ?>
+            <h2>여러 함수를 클래스로 묶기</h2>
+
+            <p>
+                공통의 데이터를 중심으로 긴밀하게 엮여 작동하는 함수들을 클래스 하나로 묶어줍니다.<br/>
+                클래스로 묶으면 이 함수들이 공유하는 공통 환경을 더 명확하게 표현할 수 있고, 각 함수에 전달되는 인수를 줄여서 객체 안세서의
+                함수 호출을 간결하게 만들 수 있습니다.
+            </p>
+
+            <ol>
+                <li>함수들이 공유하는 공통 데이터 레코드를 캡슐화한다.</li>
+                <li>공통 레코드를 사용하는 함수 각각을 새 클래스로 옮긴다.</li>
+                <li>데이터를 조작하는 로직들은 함수로 추출해서 새 클래스로 옮긴다.</li>
+            </ol>
+
+            <?= tabler_iframe_tabs([
+                [
+                    'id' => 'Exam6Show',
+                    'title' => '/refactoring/basic/exam6',
+                    'href' => '/refactoring/basic/exam6',
+                ],
+                [
+                    'id' => 'Exam6',
+                    'title' => 'Exam6.php',
+                    'href' => '/sample/home/view/Controllers/Refactoring/Basic/Exam6',
+                ],
+                [
+                    'id' => 'ReftExam6Show',
+                    'title' => '/refactoring/basic/refactoring/exam6',
+                    'href' => '/refactoring/basic/refactoring/exam6',
+                ],
+                [
+                    'id' => 'ReftExam6',
+                    'title' => 'Exam6.php(Refactoring)',
+                    'href' => '/sample/home/view/Controllers/Refactoring/Basic/Refactoring/Exam6',
+                ],
+            ]) ?>
+        <?= tabler_card_end() ?>
+
+        <?= tabler_card_start() ?>
+            <h2>여러 함수를 변환 함수로 묶기</h2>
+
+            <p>
+                여러 함수에서 도출 로직이 반복되어 사용되다면 변환 함수로 묶어준다.<br/>
+                변환 함수는 원본 데이터를 입력받아서 피룡한 정보를 모두 도출한 뒤, 각각을 출력 데이터의 필드에 넣어 반환한다.<br/>
+                이렇게 해두면 도출 과정을 검토할 일이 생겼을 대 변환 함수만 살펴보면 된다.
+            </p>
+
+            <ol>
+                <li>변환할 레코드를 입력받아서 값을 그대로 반환하는 변환 함수를 만든다.</li>
+                <li>묶을 함수중 하나를 골라서 본문 코드를 변환 함수로 옮기고, 처리 결과를 레코드에 새 필드로 기록한다.</li>
+                <li>클라이언트 코드가 이 필드를 사용하도록 수정한다.</li>
+                <li>테스트한다.</li>
+                <li>나머지 관련 함수도 위 과정에 따라 처리한다.</li>
+            </ol>
+
+            <?= tabler_iframe_tabs([
+                [
+                    'id' => 'Exam7Show',
+                    'title' => '/refactoring/basic/exam7',
+                    'href' => '/refactoring/basic/exam7',
+                ],
+                [
+                    'id' => 'Exam7',
+                    'title' => 'Exam7.php',
+                    'href' => '/sample/home/view/Controllers/Refactoring/Basic/Exam7',
+                ],
+                [
+                    'id' => 'ReftExam7Show',
+                    'title' => '/refactoring/basic/refactoring/exam7',
+                    'href' => '/refactoring/basic/refactoring/exam7',
+                ],
+                [
+                    'id' => 'ReftExam7',
+                    'title' => 'Exam7.php(Refactoring)',
+                    'href' => '/sample/home/view/Controllers/Refactoring/Basic/Refactoring/Exam7',
+                ],
+            ]) ?>
+        <?= tabler_card_end() ?>
+
+        <?= tabler_card_start() ?>
+            <h2>단계 쪼개기</h2>
+
+            <p>
+                서로 다른 두 대상을 한꺼번에 다루는 코드를 발견하면 각각을 별개 모듈로 나누는 방법을 모색한다.<br/>
+                모듈이 잘 분리되어 있다면 다른 모듈의 상세 내용은 기억하지 못해도 원하는 대로 수정을 끝마칠 수도 있다.
+            </p>
+
+            <ol>
+                <li>두 번째 단계에 해당하는 코드를 독립 함수로 추출한다.</li>
+                <li>테스트한다.</li>
+                <li>중간 데이터 구조를 만들어서 앞에서 추출한 함수의 인수로 추가한다.</li>
+                <li>테스트한다.</li>
+                <li>추출한 두 번째 단계 함수의 매개변수를 하나씩 검토한다.</li>
+                <li>그중 첫 번째 단계에서 사용되는 것은 중간 데이터 구조로 옮긴다.</li>
+                <li>하나씩 옮길 때마다 테스트한다.</li>
+                <li>첫 번째 단계 코드를 함수로 추출하면서 중간 데이터 구조를 반환하도록 만든다.</li>
+            </ol>
+
+            <?= tabler_iframe_tabs([
+                [
+                    'id' => 'Exam8Show',
+                    'title' => '/refactoring/basic/exam8',
+                    'href' => '/refactoring/basic/exam8',
+                ],
+                [
+                    'id' => 'Exam8',
+                    'title' => 'Exam8.php',
+                    'href' => '/sample/home/view/Controllers/Refactoring/Basic/Exam8',
+                ],
+                [
+                    'id' => 'ReftExam8Show',
+                    'title' => '/refactoring/basic/refactoring/exam8',
+                    'href' => '/refactoring/basic/refactoring/exam8',
+                ],
+                [
+                    'id' => 'ReftExam8',
+                    'title' => 'Exam8.php(Refactoring)',
+                    'href' => '/sample/home/view/Controllers/Refactoring/Basic/Refactoring/Exam8',
+                ],
+            ]) ?>
         <?= tabler_card_end() ?>
 
     </div>
