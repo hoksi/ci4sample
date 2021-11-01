@@ -107,6 +107,8 @@
                       </span>
                     </a>
                   </li>
+                  <!-- 헬퍼 -->
+                  <?= view('sample/topmenu/ci4lab') ?>
                 </ul>
               </div>
             </div>
