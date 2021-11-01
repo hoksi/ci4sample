@@ -10,7 +10,7 @@ use App\Controllers\BaseController;
  */
 class Home extends BaseController {
     protected $menuInfo = [
-        'title' => '실험실1',
+        'title' => '연구실1',
         'location' => 'ci4lab',
         'menu' => 'lab1',
     ];
