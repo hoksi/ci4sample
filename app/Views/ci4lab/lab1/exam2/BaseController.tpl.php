@@ -38,7 +38,7 @@ class BaseController extends Controller
 <?php else: ?>
     protected $helpers = [
 <?php foreach ($helper as $h): ?>
-        '<?= $h ?>', // <?= $h ?> 헬퍼
+        '<?= $h ?>', // <?= ucfirst($h) ?> 헬퍼
 <?php endforeach; ?>
     ];
 <?php endif; ?>

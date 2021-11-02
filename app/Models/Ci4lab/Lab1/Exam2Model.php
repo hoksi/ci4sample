@@ -11,12 +11,25 @@ class Exam2Model
 
     public function getHtml($data)
     {
-        return htmlspecialchars($this->getBaseController($data));
-        
+        return htmlspecialchars($this->getBaseController($data)) . $this->getHidden($data);
     }
 
     public function getPhp($data)
     {
         return $this->getBaseController($data);
+    }
+
+    public function getHidden($data)
+    {
+        $input = [];
+        foreach($data['helper'] as $value) {
+            $input[] = "<input type='hidden' name='helper[]' value='{$value}' />";
+        }
+
+        foreach($data['library'] as $key => $value) {
+            $input[] = "<input type='hidden' name='library[{$key}]' value='{$value}' />";
+        }
+
+        return implode("\n", $input);
     }
 }
