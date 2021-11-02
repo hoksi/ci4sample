@@ -42,6 +42,44 @@
                 ],
             ]) ?>
         <?= tabler_card_end() ?>
+
+        <?= tabler_card_start() ?>
+
+            <h2>BaseController.php 생성기</h2>
+
+            <?= tabler_iframe_tabs([
+                [
+                    'id' => 'Exam2Show',
+                    'title' => '/ci4lab/lab1/exam2',
+                    'href' => '/ci4lab/lab1/exam2',
+                ],
+                [
+                    'id' => 'Exam2',
+                    'title' => 'Exam2.php',
+                    'href' => '/sample/home/view/Controllers/Ci4lab/Lab1/Exam2',
+                ],
+                [
+                    'id' => 'Exam2Model',
+                    'title' => 'Exam2Model.php',
+                    'href' => '/sample/home/view/Models/Ci4lab/Lab1/Exam2Model',
+                ],
+                [
+                    'id' => 'Exam2IndexView',
+                    'title' => 'index.php',
+                    'href' => '/sample/home/view/Views/ci4lab/lab1/exam2/index',
+                ],
+                [
+                    'id' => 'Exam2GenerateView',
+                    'title' => 'generate.php',
+                    'href' => '/sample/home/view/Views/ci4lab/lab1/exam2/generate',
+                ],
+                [
+                    'id' => 'BaseControllerTpl',
+                    'title' => 'BaseController.tpl.php',
+                    'href' => '/sample/home/view/Views/ci4lab/lab1/exam2/BaseController.tpl',
+                ],
+            ]) ?>
+        <?= tabler_card_end() ?>
     </div>
 </div>
 <?= $this->endSection() ?>

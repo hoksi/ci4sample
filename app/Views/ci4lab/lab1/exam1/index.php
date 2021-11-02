@@ -6,7 +6,7 @@
     <thead>
         <tr>
             <th>Name</th>
-            <th>Name</th>
+            <th>Key</th>
             <th>Value</th>
             <th>비고</th>
         </tr>
@@ -207,7 +207,8 @@
         <tr>
             <td colspan="4">
                 <button type='submit'>.env 생성</button>
-            </td>            
+            </td>
+        </tr>
     </tbody>
 </table>
 </form>
